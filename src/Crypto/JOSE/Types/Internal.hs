@@ -94,7 +94,7 @@ base64url ::
   ) => Prism' s1 s2
 base64url = reconsIso . b64u . reconsIso
   where
-    b64u = prism B64U.encodeUnpadded (\s -> first (const s) (B64U.decodeUnpadded s))
+    b64u = prism B64U.encodeUnpadded (\s -> first (const s) (B64U.decode s))
     reconsIso = iso (view recons) (view recons)
 {-# INLINE base64url #-}
 

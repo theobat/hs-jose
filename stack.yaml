@@ -2,7 +2,7 @@
 # For more information, see: http://docs.haskellstack.org/en/stable/yaml_configuration/
 
 # Specifies the GHC version and set of packages available (e.g., lts-3.5, nightly-2015-09-21, ghc-7.10.2)
-resolver: lts-7.20
+resolver: lts-19.6
 
 # Local packages, usually specified by relative directory name
 packages:
@@ -17,6 +17,8 @@ flags: {}
 # Extra package databases containing global packages
 extra-package-dbs: []
 
+extra-deps:
+  - tasty-hedgehog-1.2.0.0@sha256:3deb98e9a9de9e27c25d02b7fe92ad5cf68d5163fdaaf35bca3923b3e671d46d,1803
 # Control whether we use the GHC we find on the path
 # system-ghc: true
 
